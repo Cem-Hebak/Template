@@ -71,21 +71,26 @@
                         <!--end col-->
 
                         <ul class="text-start">
-                            <ul class="list-unstyled personal-detail mb-0">
+                            <ul class="list-unstyled personal-detail mb-0"> 
                                 <li> 
-                                    <b>Phone</b> : {{ Auth::user()->mobilenumber }}
+                                <i class="dripicons-phone"></i>
+                                    <b>Contact</b> : {{ Auth::user()->mobilenumber }}
                                 </li>
                                 <li> 
-                                    <b>Role</b> : {{ Auth::user()->mobilenumber }}
+                                <i class="ti-user"></i>
+                                    <b>Role    </b>    : {{ Auth::user()->Role }}
                                 </li>
                                 <li> 
-                                    <b>Email</b> : {{ Auth::user()->mobilenumber }}
+                                <i class="mdi mdi-email"></i>
+                                    <b>Email</b> : {{ Auth::user()->email }}
                                 </li>
                                 <li> 
-                                    <b>Class</b> : {{ Auth::user()->mobilenumber }}
+                                <i class="mdi mdi-office-building"></i>
+                                    <b>Class</b> : {{ Auth::user()->Class }}
                                 </li>
                                 <li> 
-                                    <b>dsadsadas</b> : {{ Auth::user()->mobilenumber }}
+                                <i class="mdi mdi-phone-in-talk"></i>
+                                    <b>Emergency Contact</b> : {{ Auth::user()->emergencymobilenumber }}
                                 </li>
                             </ul>
                         </ul>
@@ -94,6 +99,9 @@
                         
                         <!--end col-->
                     </div>
+
+                    
+
                     <!--end row-->
                 </div>
                 <!--end f_profile-->
