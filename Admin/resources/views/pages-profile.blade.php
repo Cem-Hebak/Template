@@ -225,11 +225,14 @@
 </div>
 
 
+<div class="button-items" style="display: flex; justify-content: center; gap: 10px;">
+<button type="button" class="btn btn-primary btn-lg" onclick="printProfile()">Download Profile</button>
+    <button type="button" class="btn btn-primary btn-lg">Past Exam Records</button>
+    <button type="button" class="btn btn-primary btn-lg">Attendance Analytics</button>
+</div>
 
 
-<!-- 
-                                        
--->
+                            
 
 @endsection
 
@@ -237,6 +240,9 @@
 
 
 <script>
+    function printProfile() {
+        window.print();
+    }
     $('#update-profile').on('submit', function(event) {
         event.preventDefault();
         var Id = $('#data_id').val();
