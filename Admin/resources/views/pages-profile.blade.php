@@ -60,61 +60,225 @@
     <!--end col-->
 </div>
 
+
+
 <div class="row">
     <div class="col-12">
-        <div class="card">
+        
             
-            <div class="card-body">
-                <div class="dastone-profile">
-                    <div class="row">
-                        
-                        <!--end col-->
+        <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Biodata</h4>
+                                <p class="text-muted mb-0">
+                                </p>
+                            </div><!--end card-header-->
+                            <div class="card-body">
+                                
+                                <table class="table table-striped table-bordered dt-responsive nowrap" style="width: 100%;">
+                                    <thead>
+                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th style="width: 150px;">Date of Birth</th>
+                                            <!-- <td>{{ Auth::user()->mobilenumber }}</td> -->
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Gender</th>
+                                            <!-- <td>{{ Auth::user()->mobilenumber }}</td> -->
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Identification Card Number</th>
+                                            <!-- <td>{{ Auth::user()->mobilenumber }}</td> -->
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Nationality</th>
+                                            <!-- <td>{{ Auth::user()->mobilenumber }}</td> -->
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Role</th>
+                                            <td>{{ Auth::user()->Role }}</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Class</th>
+                                            <td>{{ Auth::user()->Class }}</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Contact</th>
+                                            <td>{{ Auth::user()->mobilenumber }}</td>
+                                            
+                                        </tr>
+                                       
+                                        <tr>
+                                            <th style="width: 150px;">Email</th>
+                                            <td>{{ Auth::user()->email }}</td>
+                                            
+                                        </tr>
+                                       
+                                       
+                                      
+                                    </tbody>
+                                </table>
 
-                        <ul class="text-start">
-                            <ul class="list-unstyled personal-detail mb-0"> 
-                                <li> 
-                                <i class="dripicons-phone"></i>
-                                    <b>Contact</b> : {{ Auth::user()->mobilenumber }}
-                                </li>
-                                <li> 
-                                <i class="ti-user"></i>
-                                    <b>Role    </b>    : {{ Auth::user()->Role }}
-                                </li>
-                                <li> 
-                                <i class="mdi mdi-email"></i>
-                                    <b>Email</b> : {{ Auth::user()->email }}
-                                </li>
-                                <li> 
-                                <i class="mdi mdi-office-building"></i>
-                                    <b>Class</b> : {{ Auth::user()->Class }}
-                                </li>
-                                <li> 
-                                <i class="mdi mdi-phone-in-talk"></i>
-                                    <b>Emergency Contact</b> : {{ Auth::user()->emergencymobilenumber }}
-                                </li>
-                            </ul>
-                        </ul>
+                                
 
-                        <!--end col-->
-                        
-                        <!--end col-->
-                    </div>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+            </div>
+            
+            
+            <!--end card-body-->
+        </div>
+        <!--end card-->
 
-                    
+        
+            
+            <!--end card-body-->
+        
+    </div>
+    <!--end col-->
+</div>
 
-                    <!--end row-->
-                </div>
-                <!--end f_profile-->
+<div class="row">
+    <div class="col-12">
+        
+            
+        <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Biodata</h4>
+                                <p class="text-muted mb-0">
+                                </p>
+                            </div><!--end card-header-->
+                            <div class="card-body">
+                                
+                                <table class="table table-striped table-bordered dt-responsive nowrap" style="width: 100%;">
+                                    <thead>
+                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th style="width: 150px;">Date of Birth</th>
+                                            <!-- <td>{{ Auth::user()->mobilenumber }}</td> -->
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Gender</th>
+                                            <!-- <td>{{ Auth::user()->mobilenumber }}</td> -->
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Identification Card Number</th>
+                                            <!-- <td>{{ Auth::user()->mobilenumber }}</td> -->
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Nationality</th>
+                                            <!-- <td>{{ Auth::user()->mobilenumber }}</td> -->
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Role</th>
+                                            <td>{{ Auth::user()->Role }}</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Class</th>
+                                            <td>{{ Auth::user()->Class }}</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Contact</th>
+                                            <td>{{ Auth::user()->mobilenumber }}</td>
+                                            
+                                        </tr>
+                                       
+                                        <tr>
+                                            <th style="width: 150px;">Email</th>
+                                            <td>{{ Auth::user()->email }}</td>
+                                            
+                                        </tr>
+                                       
+                                       
+                                      
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
             </div>
 
             
             <!--end card-body-->
         </div>
         <!--end card-->
+
+        
+            
+            <!--end card-body-->
+        
     </div>
     <!--end col-->
 </div>
 
+
+
+
+<!-- 
+                                        <tr>
+                                            <th style="width: 150px;">Father's Name</th>
+                                            <!-- <td>{{ Auth::user()->mobilenumber }}</td> -->
+                                            
+                                            </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Father's Contact</th>
+                                            <!-- <td>{{ Auth::user()->mobilenumber }}</td> -->
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Father's Occupation</th>
+                                            <!-- <td>{{ Auth::user()->mobilenumber }}</td> -->
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Mother's Name</th>
+                                            <!-- <td>{{ Auth::user()->mobilenumber }}</td> -->
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Mother's Contact</th>
+                                            <!-- <td>{{ Auth::user()->mobilenumber }}</td> -->
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Mother's Occupation</th>
+                                            <!-- <td>{{ Auth::user()->mobilenumber }}</td> -->
+                                            
+                                        </tr>
+
+
+                                        <tr>
+                                            <th style="width: 150px;">Blood Group</th>
+                                            <!-- <td>{{ Auth::user()->mobilenumber }}</td> -->
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Allergies</th>
+                                            <!-- <td>{{ Auth::user()->mobilenumber }}</td> -->
+                                            
+                                        </tr>
+-->
 
 @endsection
 
