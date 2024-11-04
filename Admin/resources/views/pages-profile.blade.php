@@ -243,6 +243,7 @@
     function printProfile() {
         window.print();
     }
+    
     $('#update-profile').on('submit', function(event) {
         event.preventDefault();
         var Id = $('#data_id').val();
