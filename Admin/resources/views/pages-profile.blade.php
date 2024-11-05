@@ -111,12 +111,39 @@
                                             <td>{{ Auth::user()->Role }}</td>
                                             
                                         </tr>
-                                        <tr>
+                                        <!-- <tr>
                                             <th style="width: 150px;">Class</th>
                                             <td>{{ Auth::user()->Class }}</td>
                                             
                                         </tr>
-                                        <tr>
+                                        <tr> -->
+                                        @if(Auth::user()->Role == 'Student'){
+
+                                            <tr>
+                                                <th style="width: 150px;">Class</th>
+                                                <td>{{ Auth::user()->Class }}</td>
+                                                
+                                            </tr>
+                                            }
+                                            @elseif(Auth::user()->Role == 'Teacher'){
+
+                                            <tr>
+                                                <th style="width: 150px;">Class Teacher</th>
+                                                <td>{{ Auth::user()->Class }}</td>
+                                                
+                                            </tr>
+                                            }
+                                            @elseif(Auth::user()->Role == 'Staff'){
+                                                <tr>
+                                                <th style="width: 150px;">Location</th>
+                                                <td>{{ Auth::user()->Class }}</td>
+                                                
+                                            </tr>
+                                            }
+                                            @elseif(Auth::user()->Role == 'Admin'){
+                                                
+                                            }
+                                            @endif
                                             <th style="width: 150px;">Contact</th>
                                             <td>{{ Auth::user()->mobilenumber }}</td>
                                             
