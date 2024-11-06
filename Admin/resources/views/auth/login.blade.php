@@ -42,7 +42,7 @@
                                     @endif
                                     <form class="form-horizontal auth-form" method="POST" action="{{ route('login') }}">
                                         @csrf
-                                        <div class="form-group mb-2">
+                                        <!-- <div class="form-group mb-2">
                                             <label class="form-label" for="username">Username</label>
                                             <div class="input-group">
                                                 <input name="email" type="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email', 'admin@mannatthemes.com') }}" id="username" placeholder="Enter Email" autocomplete="email" autofocus>
@@ -52,9 +52,9 @@
                                                 </span>
                                                 @enderror
                                             </div>
-                                        </div>
+                                        </div> -->
 
-                                        <div class="form-group mb-2">
+                                        <!-- <div class="form-group mb-2">
                                             <label class="form-label" for="userpassword">Password</label>
                                             <div class="input-group">
                                                 <input type="password" name="password" class="form-control  @error('password') is-invalid @enderror" id="userpassword" value="123456" placeholder="Enter password" aria-label="Password" aria-describedby="password-addon">
@@ -64,7 +64,20 @@
                                                     </span>
                                                 @enderror
                                             </div>
+                                        </div> -->
+
+                                        <div class="form-group mb-2">
+                                            <label class="form-label" for="idNumber">Identification Card Number</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control @error('idNumber') is-invalid @enderror" id="idNumber" name="idNumber" value="{{ old('idNumber') }}" placeholder="Enter your ID card number" autofocus>
+                                                @error('idNumber')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
                                         </div>
+
 
                                         <div class="form-group row my-3">
                                             <div class="col-sm-6">
@@ -127,7 +140,7 @@
                                         </div>
 
 
-                                        <div class="form-group mb-2">
+                                        <!-- <div class="form-group mb-2">
                                             <label class="form-label" for="useremail">Email</label>
                                             <div class="input-group">
                                                 <input type="email" class="form-control @error('email') is-invalid @enderror" id="useremail" value="{{ old('email') }}" name="email" placeholder="Enter email" autofocus>
@@ -137,7 +150,9 @@
                                                     </span>
                                                 @enderror
                                             </div>
-                                        </div>
+                                        </div> -->
+
+
 
 
                                         <div class="form-group mb-2">
@@ -231,3 +246,29 @@
 </div>
 
 @endsection
+
+<script>
+    public function login(Request $request)
+{
+    // Validate the request to ensure the 'idNumber' field is provided
+    $request->validate([
+        'idNumber' => 'required|string|exists:users,IdentificationCardNumber',
+    ]);
+
+    // Define the credentials array with the column name as it appears in the database
+    $credentials = ['IdentificationCardNumber' => $request->idNumber];
+
+    // Attempt to authenticate using the credentials
+    if (Auth::attempt($credentials)) {
+        // Redirect to intended page if successful
+        return redirect()->intended('dashboard');
+    }
+
+    // Return an error message if authentication fails
+    return back()->withErrors([
+        'idNumber' => 'The provided ID number does not match our records.',
+    ]);
+}
+
+
+</script>
