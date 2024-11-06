@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +29,9 @@ Route::post('/update-profile/{id}', [App\Http\Controllers\HomeController::class,
 Route::get('{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
 Route::post('/update-password/{id}', [App\Http\Controllers\HomeController::class, 'updatePassword'])->name('updatePassword');
+
+//Login
+Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginPage'])->name('login');
+Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login'])->name('login.post');
+
+
