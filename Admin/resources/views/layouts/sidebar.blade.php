@@ -14,17 +14,11 @@
         <!--end logo-->
         <div class="menu-content h-100" data-simplebar>
             <ul class="metismenu left-sidenav-menu">
+            
                 <li class="menu-label mt-0">Main</li>
+                
                 <li>
-                    <a href="javascript: void(0);"> <i data-feather="home"
-                            class="align-self-center menu-icon"></i><span>Dashboard</span><span
-                            class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
-                    <ul class="nav-second-level" aria-expanded="false">
-                        <li class="nav-item"><a class="nav-link" href="index"><i
-                                    class="ti-control-record"></i>Analytics</a></li>
-                        <li class="nav-item"><a class="nav-link" href="sales-index"><i
-                                    class="ti-control-record"></i>Sales</a></li>
-                    </ul>
+                <a href="index"> <i data-feather="home" class="align-self-center menu-icon"></i><span>Dashboard</span></a>
                 </li>
 
                 <li>
