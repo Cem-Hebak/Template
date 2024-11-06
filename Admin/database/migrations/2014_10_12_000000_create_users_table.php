@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('ic_number')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('mobilenumber');
@@ -27,7 +26,7 @@ return new class extends Migration
             $table->timestamps();
             $table->date('date_of_birth')->nullable();
             $table->string('gender')->nullable();
-            $table->string('identification_card_number')->nullable();
+            $table->string('ic_number')->unique();
             $table->string('nationality')->default('Malaysian');
             $table->string('address')->nullable();
             $table->string('fname')->nullable();
