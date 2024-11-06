@@ -18,8 +18,29 @@ return new class extends Migration
             $table->string('ic_number')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
+            $table->string('mobilenumber');
+            $table->string('emergencymobilenumber')->nullable();
+            $table->string('role')->default('Student');
+            $table->string('class')->nullable();
+            $table->string('avatar');
+            $table->string('remember_token', 100)->nullable();
             $table->timestamps();
+            $table->date('date_of_birth')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('identification_card_number')->nullable();
+            $table->string('nationality')->default('Malaysian');
+            $table->string('address')->nullable();
+            $table->string('fname')->nullable();
+            $table->string('fcontact')->nullable();
+            $table->string('foccupation')->nullable();
+            $table->string('mname')->nullable();
+            $table->string('mcontact')->nullable();
+            $table->string('moccupation')->nullable();
+            $table->string('gname')->default('Not Applicable');
+            $table->string('gcontact')->default('Not Applicable');
+            $table->string('goccupation')->default('Not Applicable');
+            $table->string('blood_type')->nullable();
+            $table->string('allergies')->default('None');
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
