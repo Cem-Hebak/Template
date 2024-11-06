@@ -41,17 +41,6 @@
 
                     <div class="row align-items-center mt-3">
                         <div class="col-lg-6">
-                            <h4 class="text-start">Keyboard & assistive technology settings</h4>
-                        </div>
-                        <div class="col-lg-6 text-end">
-                            <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalCenter2">
-                            view
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="row align-items-center mt-3">
-                        <div class="col-lg-6">
                             <h4 class="text-start">Size</h4>
                         </div>
                         <div class="col-lg-6 text-end">
@@ -81,45 +70,12 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-soft-primary btn-sm" onclick="saveDisplayMode()">Save changes</button>
+                                    <button type="button" class="btn btn-soft-primary btn-sm" onclick="saveDisplayMode()" data-bs-dismiss="modal">Save changes</button>
                                     <button type="button" class="btn btn-soft-secondary btn-sm" data-bs-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h6 class="modal-title m-0" id="exampleModalCenterTitle">Ayam</h6>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div><!--end modal-header-->
-                                    <div class="modal-body">
-                                        <div class="row">
-                                            <div class="col-lg-3 text-center align-self-center">
-                                                <img src="{{ URL::asset('assets/images/widgets/btc.png') }}" alt="" class="img-fluid">
-                                            </div><!--end col-->
-                                                <div class="col-lg-9">
-                                                    <h5>Crypto Market Services</h5>
-                                                    <span class="badge bg-soft-secondary">Disable Services</span>
-                                                    <small class="text-muted ms-2">07 Oct 2020</small>
-                                                        <ul class="mt-3 mb-0">
-                                                            <li>Lorem Ipsum is dummy text.</li>
-                                                            <li>It is a long established reader.</li>
-                                                            <li>Contrary to popular belief, Lorem simply.</li>
-                                                        </ul>
-                                                </div><!--end col-->
-                                        </div><!--end row-->
-                                    </div><!--end modal-body-->
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-soft-primary btn-sm">Save changes</button>
-                                        <button type="button" class="btn btn-soft-secondary btn-sm" data-bs-dismiss="modal">Close</button>
-                                </div><!--end modal-footer-->
-                            </div><!--end modal-content-->
-                        </div><!--end modal-dialog-->
-                    </div><!--end modal-->
 
                     <!-- Font Size Modal  -->
                     <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -143,7 +99,7 @@
                                         </div><!--end row-->
                                 </div><!--end modal-body-->
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-soft-primary btn-sm" onclick="applyFontSize()">Save changes</button>
+                                    <button type="button" class="btn btn-soft-primary btn-sm" onclick="applyFontSize()" data-bs-dismiss="modal">Save changes</button>
                                     <button type="button" class="btn btn-soft-secondary btn-sm" data-bs-dismiss="modal">Close</button>
                                 </div><!--end modal-footer-->
                             </div><!--end modal-content-->
@@ -204,25 +160,5 @@
 
 @section('script')
 <script src="{{ URL::asset('assets/js/app.js') }}"></script>
-    <script>
-        // Function to apply font size
-        function applyFontSize() {
-            const selectedSize = document.getElementById('fontSizeSelector').value;
-            document.body.className = ''; // Clear any existing size classes
-            document.body.classList.add(selectedSize); // Add the selected size class
-            localStorage.setItem('fontSize', selectedSize); // Save the font size in local storage
-        }
-
-        // Function to load font size from local storage on page load
-        function loadFontSize() {
-            const savedFontSize = localStorage.getItem('fontSize');
-            if (savedFontSize) {
-                document.body.classList.add(savedFontSize); // Apply saved font size
-                document.getElementById('fontSizeSelector').value = savedFontSize; // Update the dropdown
-            }
-        }
-
-        // Load the font size when the page is loaded
-        document.addEventListener('DOMContentLoaded', loadFontSize);
-    </script>
+<script src="{{ URL::asset('assets/js/displayMode.js') }}"></script>
 @endsection
