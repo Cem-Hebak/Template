@@ -42,7 +42,56 @@
                         </div>
                     </div><!--end card-body-->
                 </div><!--end card-->
-        </div>
+                <div class="row mt-3"> <!-- Add some spacing with mt-3 -->
+                <!-- First Clickable Box -->
+                <div class="col-md-6">
+                    <a href="https://link-to-page1.com" target="_blank"> <!-- Link to the first page -->
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Box 1 Title</h5>
+                                <p class="card-text">Description for Box 1.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Second Clickable Box -->
+                <div class="col-md-6">
+                    <a href="https://link-to-page2.com" target="_blank"> <!-- Link to the second page -->
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Box 2 Title</h5>
+                                <p class="card-text">Description for Box 2.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Third Clickable Box -->
+                <div class="col-md-6">
+                    <a href="https://link-to-page3.com" target="_blank"> <!-- Link to the second page -->
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Box 3 Title</h5>
+                                <p class="card-text">Description for Box 3.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Fourth Clickable Box -->
+                <div class="col-md-6">
+                    <a href="https://link-to-page4.com" target="_blank"> <!-- Link to the second page -->
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Box 4 Title</h5>
+                                <p class="card-text">Description for Box 4.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div> 
+        <!-- Atas ni untuk halang dari rightbar tu tukar tempat -->
 
             <div class="col-lg-3">
                 <div class="card overflow-hidden">
@@ -81,7 +130,7 @@
                             <div id="ana_device" class="apex-charts"></div>
                             <h6 class="bg-light-alt py-3 px-2 mb-0">
                                 <i data-feather="calendar" class="align-self-center icon-xs me-1"></i>
-                                Start school to current
+                                2025 Session
                             </h6>
                         </div>
                     </div><!--end card-body-->
