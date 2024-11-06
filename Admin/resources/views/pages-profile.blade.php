@@ -1252,4 +1252,5 @@
 <script src="{{ URL::asset('assets/plugins/lightpick/lightpick.js') }}"></script>
 <script src="{{ URL::asset('assets/js/pages/jquery.profile.init.js') }}"></script>
 <script src="{{ URL::asset('assets/js/app.js') }}"></script>
+<script src="{{ URL::asset('assets/js/displayMode.js') }}"></script>
 @endsection

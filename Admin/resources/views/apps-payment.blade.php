@@ -112,6 +112,7 @@
 
 @section('script')
     <script src="{{ URL::asset('assets/js/app.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/displayMode.js') }}"></script>
     <script>
         document.getElementById('submitPaymentButton').addEventListener('click', function (event) {
             event.preventDefault();
