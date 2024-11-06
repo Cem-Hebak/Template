@@ -26,7 +26,8 @@
 
                     <h4 class="mt-4">Where you receive these notifications</h4>
                     <div class="d-flex justify-content-between align-items-center mt-2">
-                        <p class="mb-0">Push</p>
+                        <p class="mb-0"><i data-feather="monitor"
+                        class="align-self-center menu-icon ms-auto"></i>  Push</p>
                         <div class="form-check form-switch form-switch-info">
                             <input class="form-check-input" type="checkbox" id="customSwitchPush" checked>
                             <label class="form-check-label" for="customSwitchPush"></label>
@@ -34,7 +35,8 @@
                     </div>
 
                     <div class="d-flex justify-content-between align-items-center mt-2">
-                        <p class="mb-0">Email</p>
+                        <p class="mb-0"><i data-feather="mail"
+                        class="align-self-center menu-icon"></i>  Email</p>
                         <div class="form-check form-switch form-switch-info">
                             <input class="form-check-input" type="checkbox" id="customSwitchEmail" checked>
                             <label class="form-check-label" for="customSwitchEmail"></label>
@@ -42,7 +44,8 @@
                     </div>
 
                     <div class="d-flex justify-content-between align-items-center mt-2">
-                        <p class="mb-0">SMS</p>
+                        <p class="mb-0"><i data-feather="message-circle"
+                        class="align-self-center menu-icon"></i>  SMS</p>
                         <div class="form-check form-switch form-switch-info">
                             <input class="form-check-input" type="checkbox" id="customSwitchSMS" checked>
                             <label class="form-check-label" for="customSwitchSMS"></label>

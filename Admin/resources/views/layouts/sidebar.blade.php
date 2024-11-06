@@ -16,11 +16,11 @@
             <ul class="metismenu left-sidenav-menu">
                 <li class="menu-label mt-0">Setting and User Preference</li>
                 <li>
-                    <a href="pages-profile"> <i data-feather="home"
+                    <a href="pages-profile"> <i data-feather="user"
                             class="align-self-center menu-icon" ></i><span>Profile Details</span></a>
                 </li>
                 <li>
-                    <a href="javascript: void(0);"> <i data-feather="home"
+                    <a href="javascript: void(0);"> <i data-feather="bell"
                             class="align-self-center menu-icon"></i><span>Notifications</span><span
                             class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                     <ul class="nav-second-level" aria-expanded="false">
@@ -35,16 +35,16 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="apps-invoice1"> <i data-feather="home"
+                    <a href="apps-invoice1"> <i class="ti-star"
                             class="align-self-center menu-icon"></i><span>Accessability</span><span
                             class="menu-arrow"></span></a>
                 </li>
                 <li>
-                    <a href="apps-language"> <i data-feather="home"
-                            class="align-self-center menu-icon"></i><span>Language and Region</span></a>
+                    <a href="apps-language"> <i class="dripicons-blog"
+                            class="align-self-center menu-icon"></i><span>Language</span></a>
                 </li>
                 <li>
-                    <a href="apps-payment"> <i data-feather="home"
+                    <a href="apps-payment"> <i class="dripicons-card"
                             class="align-self-center menu-icon"></i><span>Payments</span></a>
                 </li>
 

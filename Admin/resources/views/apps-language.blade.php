@@ -20,7 +20,7 @@
             <div class="card">
                 <div class="card-body invoice-head">
                     <div class="row">
-                        <p><strong class="font-40">Language and Region</strong></p>
+                        <p><strong class="font-40">{{ __('messages.language') }}</strong></p>
                     </div><!--end row-->
                 </div><!--end card-body-->
                 
@@ -41,23 +41,23 @@
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h6 class="modal-title m-0" id="exampleModalCenterTitle">App language</h6>
+                                    <h6 class="modal-title m-0" id="exampleModalCenterTitle">{{ __('messages.language') }}</h6>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="col-lg-9">
-                                            <h5>Choose the language</h5>
-                                            <p>Language that is understandable</p>
+                                            <h5>{{ __('messages.language') }}</h5>
+                                            <p>Select the language you prefer:</p>
                                             <select id="languageSelector" class="form-select mt-3">
-                                                <option value="en">English</option>
-                                                <option value="ms">Bahasa Melayu</option>
+                                            <option value="en" {{ App::getLocale() === 'en' ? 'selected' : '' }}>English</option>
+                                            <option value="ms" {{ App::getLocale() === 'ms' ? 'selected' : '' }}>Bahasa Melayu</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-soft-primary btn-sm">Save changes</button>
+                                    <button type="button" class="btn btn-soft-primary btn-sm" onclick="saveLanguage()" data-bs-dismiss="modal">Save changes</button>
                                     <button type="button" class="btn btn-soft-secondary btn-sm" data-bs-dismiss="modal">Close</button>
                                 </div>
                             </div>
@@ -94,4 +94,12 @@
 @section('script')
     <script src="{{ URL::asset('assets/js/app.js') }}"></script>
     <script src="{{ URL::asset('assets/js/displayMode.js') }}"></script>
+    <script>
+    function saveLanguage() {
+        // Get selected language from the dropdown
+        const selectedLang = document.getElementById('languageSelector').value;
+        // Redirect to the language switch route
+        window.location.href = "{{ url('/switch-language') }}/" + selectedLang;
+    }
+    </script>
 @endsection
