@@ -27,6 +27,13 @@
         </form>
 
         <a href="#">Forgot your password? </a>
+
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
     </div>
 </body>
 </html>
