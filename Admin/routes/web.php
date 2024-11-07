@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\PasswordRecoveryController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +30,5 @@ Route::post('/update-profile/{id}', [App\Http\Controllers\HomeController::class,
 Route::get('{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
 Route::post('/update-password/{id}', [App\Http\Controllers\HomeController::class, 'updatePassword'])->name('updatePassword');
+
+Route::post('/password-recovery', [PasswordRecoveryController::class, 'sendResetLink'])->name('password.recovery');
