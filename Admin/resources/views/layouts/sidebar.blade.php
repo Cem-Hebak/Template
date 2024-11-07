@@ -88,7 +88,7 @@
                     <ul class="nav-second-level" aria-expanded="false">
                         <li class="nav-item"><a class="nav-link" href="auth-login"><i
                                     class="ti-control-record"></i>Log in</a></li>
-                        <li class="nav-item"><a class="nav-link" href="auth-register"><i
+                        <li class="nav-item"><a class="nav-link" href="auth.register"><i
                                     class="ti-control-record"></i>Register</a></li>
                         <li class="nav-item"><a class="nav-link" href="auth-recover-pw"><i
                                     class="ti-control-record"></i>Recover Password</a></li>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - SeKAD</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/register.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -34,7 +34,8 @@
             <input type="text" name="mobilenumber" placeholder="Mobile Number" value="{{ old('mobilenumber') }}" required>
 
             <!-- Date of Birth, Gender -->
-            <input type="date" name="date_of_birth" value="{{ old('date_of_birth') }}">
+            <div class="date-placeholder" data-placeholder="Date of birth"><input type="date" name="date_of_birth" value="{{ old('date_of_birth') }}"></div>
+
             <select name="gender">
                 <option value="">Select Gender</option>
                 <option value="Male" {{ old('gender') == 'Male' ? 'selected' : '' }}>Male</option>
