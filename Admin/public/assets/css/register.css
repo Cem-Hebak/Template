@@ -1,8 +1,6 @@
-/* register */
-
 /* Reset and Font Setup */
 * {
-    margin-top: 0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -13,139 +11,149 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f5f5f5;
+    background-color: #e8f0f6;
 }
 
 /* Register Box */
 .register-box {
-    width: 60%;
+    width: 50%;
     max-width: 800px;
-    background-color: #fff;
-    padding: 40px;
+    background-color: #ffffff;
+    padding: 40px 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-top: 5px solid #0073e6;
 }
 
+/* Title and Subheading */
 .register-box h2 {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 26px;
+    font-weight: 700;
     color: #333;
-    text-align: left;
+    margin-bottom: 8px;
 }
 
 .register-box p {
     font-size: 18px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Section Titles */
+.register-box h3 {
+    font-size: 20px;
     font-weight: bold;
     color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #0073e6;
+    padding-bottom: 5px;
+}
+
+/* Profile Circle */
+.profile-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f0f8ff;
+    border: 2px solid #0073e6;
+    margin: 0 auto 20px;
+}
+
+/* Form Layout */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-column {
     margin-bottom: 20px;
 }
 
-/* Form Inputs */
-.register-box form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.register-box form input[type="text"],
-.register-box form input[type="email"],
-.register-box form input[type="date"],
-.register-box form input[type="password"],
-.register-box form select {
-    width: calc(50% - 10px);
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.register-box form input[type="text"]::placeholder,
-.register-box form input[type="email"]::placeholder,
-.register-box form input[type="password"]::placeholder {
-    color: #aaa;
-}
-
-/* Gender and Nationality */
-.register-box form select {
-    appearance: none;
-    background-color: #fff;
+/* Input and Label */
+label {
+    font-size: 14px;
+    font-weight: 600;
     color: #333;
+    margin-bottom: 6px;
 }
 
-/* Button */
-.btn-register {
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+select {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccd1d9;
+    border-radius: 4px;
+    margin-bottom: 15px;
     width: 100%;
+    background-color: #f9f9f9;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #0073e6;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Full Width Button */
+.full-width {
+    width: 100%;
+}
+
+/* Submit Button */
+.btn-register {
     padding: 12px;
     font-size: 18px;
-    color: #fff;
-    background-color: #333;
+    color: #ffffff;
+    background-color: #0073e6;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 20px;
     transition: background-color 0.3s ease;
 }
 
 .btn-register:hover {
-    background-color: #555;
+    background-color: #005bb5;
 }
 
-/* Error Alert */
-.alert.alert-danger {
+/* Profile Circle */
+.profile-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f0f8ff;
+    border: 2px solid #0073e6;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-circle img {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    color: #a94442;
-    background-color: #f2dede;
-    border: 1px solid #ebccd1;
-    border-radius: 4px;
+    height: 100%;
+    object-fit: cover;
 }
 
-.alert.alert-danger ul {
-    list-style-type: none;
+#profile-upload {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
 }
 
-.alert.alert-danger li {
-    margin-bottom: 5px;
-}
-
-/* Custom placeholder for date input */
-.date-placeholder::before {
-    content: attr(data-placeholder);
-    color: #aaa;
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-}
-
-.date-placeholder input[type="date"] {
-    color: transparent; /* Hide default text */
-    position: relative;
-    z-index: 1;
-}
-
-.date-placeholder input[type="date"]:focus {
-    color: #333; /* Show the selected date text */
-}
-
-.date-placeholder input[type="date"]:not(:placeholder-shown) {
-    color: #333; /* Show selected date when a value is entered */
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .register-box {
         width: 90%;
         padding: 20px;
-    }
-
-    .register-box form input[type="text"],
-    .register-box form input[type="email"],
-    .register-box form input[type="date"],
-    .register-box form input[type="password"],
-    .register-box form select {
-        width: 100%;
     }
 }
