@@ -7,6 +7,17 @@
     <title>Register - SeKAD</title>
     <link rel="stylesheet" href="{{ asset('assets/css/register.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&display=swap" rel="stylesheet">
+
+    <script>
+        function previewProfileImage(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const output = document.getElementById('profile-preview');
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
 </head>
 <body>
     <div class="register-box">
@@ -23,16 +34,25 @@
             </div>
         @endif
 
-        <!-- Profile Circle -->
+        <!-- Profile Circle
         <div class="profile-circle" id="profile-circle">
             <img id="profile-preview" src="{{ asset('assets/images/default-profile.png') }}" alt="Profile Picture">
         </div>
         
-        <input type="file" id="profile-upload" name="profile_picture" accept="image/*" onchange="previewProfileImage(event)">
+        <input type="file" id="profile-upload" name="profile_picture" accept="image/*" onchange="previewProfileImage(event)"> -->
 
         <!-- Register Form -->
-        <form action="{{ route('register.post') }}" method="POST" class="form-container">
+        <form action="{{ route('register.post') }}" method="POST" enctype="multipart/form-data" class="form-container">
             @csrf
+
+            <!-- Profile Circle -->
+            <div class="profile-circle" id="profile-circle">
+                <img id="profile-preview" src="{{ asset('assets/images/default-profile.png') }}" alt="Profile Picture">
+                <span class="placeholder-text">Profile Picture</span>
+            </div>
+
+            <!-- Profile Picture Upload -->
+            <input type="file" id="profile-upload" name="profile_picture" accept="image/*" onchange="previewProfileImage(event)">
 
             <!-- Personal Information Section -->
             <h3>Personal Information</h3>

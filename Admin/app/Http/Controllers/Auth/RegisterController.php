@@ -50,12 +50,19 @@ class RegisterController extends Controller
             'blood_type' => 'nullable|string',
             'allergies' => 'nullable|string',
             'password' => 'required|string|min:8|confirmed',
+            'profile_picture' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         if ($validator->fails()) {
             return redirect()->route('register')
                              ->withErrors($validator)
                              ->withInput();
+        }
+
+        $avatarPath = 'default-avatar.png'; // default avatar
+        if ($request->hasFile('profile_picture')) {
+            $file = $request->file('profile_picture');
+            $avatarPath = $file->store('avatars', 'public'); // Store in "public/avatars" directory
         }
 
         // Create the user
@@ -81,7 +88,7 @@ class RegisterController extends Controller
             'allergies' => $request->allergies ?? 'None',
             'password' => Hash::make($request->password),
             'role' => 'Student', // Default role, modify if necessary
-            'avatar' => 'default-avatar.png', // You can use a default avatar if needed
+            'avatar' => $avatarPath, // You can use a default avatar if needed
         ]);
 
         // Redirect to the login page with a success message
