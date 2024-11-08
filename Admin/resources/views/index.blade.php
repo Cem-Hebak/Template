@@ -40,39 +40,93 @@
                         <div class="">
                             <div><b>Any Announcement will Appear Here</b></div>
                         </div>
-                    </div><!--end card-body-->
+                    
+                        <!-- Bootstrap Carousel -->
+                        <div id="announcementCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <!-- First Slide -->
+                                <div class="carousel-item active">
+                                    <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Announcement Image 1">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Announcement 1</h5>
+                                        <p>Details about Announcement 1.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Second Slide -->
+                                <div class="carousel-item">
+                                    <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Announcement Image 2">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Announcement 2</h5>
+                                        <p>Details about Announcement 2.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Third Slide -->
+                                <div class="carousel-item">
+                                    <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Announcement Image 3">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Announcement 3</h5>
+                                        <p>Details about Announcement 3.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Carousel Controls -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#announcementCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#announcementCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div><!-- End Carousel -->
+                    </div>       
+                    
                 </div><!--end card-->
                 <div class="row mt-3"> <!-- Add some spacing with mt-3 -->
                 <!-- First Clickable Box -->
-                <div class="col-md-6">
+                 <div><b>Suggested items for you</b></div>
+                <div class="col-md-3">
                     <a href="https://link-to-page1.com" target="_blank"> <!-- Link to the first page -->
                         <div class="card">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Box 1 Title</h5>
-                                <p class="card-text">Description for Box 1.</p>
+                            <div class="card-body text-left">
+                                <h5 class="card-title"></i>Profile</h5>
+                                <p class="card-text">View or Edit your Credentials</p>
                             </div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Second Clickable Box -->
-                <div class="col-md-6">
+                <div class="col-md-3">
                     <a href="https://link-to-page2.com" target="_blank"> <!-- Link to the second page -->
                         <div class="card">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Box 2 Title</h5>
-                                <p class="card-text">Description for Box 2.</p>
+                            <div class="card-body text-left">
+                                <h5 class="card-title">Class Registration</h5>
+                                <p class="card-text">Register your class here!</p>
                             </div>
                         </div>
                     </a>
                 </div>
                 <!-- Third Clickable Box -->
-                <div class="col-md-6">
+                <div class="col-md-3">
                     <a href="https://link-to-page3.com" target="_blank"> <!-- Link to the second page -->
                         <div class="card">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Box 3 Title</h5>
-                                <p class="card-text">Description for Box 3.</p>
+                            <div class="card-body text-left">
+                                <h5 class="card-title">Facility Management</h5>
+                                <p class="card-text">Book any Facilities here!</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://link-to-page7.com" target="_blank"> <!-- Link to the second page -->
+                        <div class="card">
+                            <div class="card-body text-left">
+                                <h5 class="card-title">Settings</h5>
+                                <p class="card-text">Website settings</p>
                             </div>
                         </div>
                     </a>
@@ -81,9 +135,20 @@
                 <div class="col-md-6">
                     <a href="https://link-to-page4.com" target="_blank"> <!-- Link to the second page -->
                         <div class="card">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Box 4 Title</h5>
-                                <p class="card-text">Description for Box 4.</p>
+                            <div class="card-body text-left">
+                                <h5 class="card-title">Student Support Services</h5>
+                                <p class="card-text">Book with a Counsellor here!</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Fifth Clickable Box -->
+                <div class="col-md-6">
+                    <a href="https://link-to-page5.com" target="_blank"> <!-- Link to the second page -->
+                        <div class="card">
+                            <div class="card-body text-left">
+                                <h5 class="card-title">Attendance and Absence Management</h5>
+                                <p class="card-text">Any problem with your attendance can be solved here!</p>
                             </div>
                         </div>
                     </a>
