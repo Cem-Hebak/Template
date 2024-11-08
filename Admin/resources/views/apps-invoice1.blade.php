@@ -3,7 +3,7 @@
 
 
 @section('content')
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/font-style.css') }}">
     <style>
         .button-right {
             margin-left: auto;
@@ -12,9 +12,8 @@
 
     @component('components.breadcrumb')
         @slot('li_1') SeKAD @endslot
-        @slot('li_2') Notifications @endslot
-        @slot('li_3') Reminders @endslot
-        @slot('title') Reminders @endslot
+        @slot('li_3') Accessability @endslot
+        @slot('title') Accessability @endslot
     @endcomponent
 
     <div class="row">
@@ -100,7 +99,7 @@
                                         </div><!--end row-->
                                 </div><!--end modal-body-->
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-soft-primary btn-sm" onclick="applyFontSize()" data-bs-dismiss="modal">Save changes</button>
+                                    <button type="button" id="saveFontSizeBtn" class="btn btn-soft-primary btn-sm" data-bs-dismiss="modal">Save changes</button>
                                     <button type="button" class="btn btn-soft-secondary btn-sm" data-bs-dismiss="modal">Close</button>
                                 </div><!--end modal-footer-->
                             </div><!--end modal-content-->
@@ -134,18 +133,6 @@
     </div>
 
     <style>
-        /* CSS for font size classes */
-        .small {
-            font-size: 12px; /* Example size */
-        }
-
-        .medium {
-            font-size: 16px; /* Example size */
-        }
-
-        .large {
-            font-size: 20px; /* Example size */
-        }
 
         body.dark {
             background-color: #121212;

@@ -8,8 +8,7 @@
 
 @section('content')
 @component('components.breadcrumb')
-@slot('li_1') Dastone @endslot
-@slot('li_2') Pages @endslot
+@slot('li_1') SeKAD @endslot
 @slot('li_3') Profile @endslot
 @slot('title') Profile @endslot
 @endcomponent
@@ -1253,4 +1252,5 @@
 <script src="{{ URL::asset('assets/js/pages/jquery.profile.init.js') }}"></script>
 <script src="{{ URL::asset('assets/js/app.js') }}"></script>
 <script src="{{ URL::asset('assets/js/displayMode.js') }}"></script>
+<script src="{{ asset('assets/js/font-size.js') }}"></script>
 @endsection

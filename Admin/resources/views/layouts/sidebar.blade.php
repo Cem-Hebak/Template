@@ -14,7 +14,7 @@
         <!--end logo-->
         <div class="menu-content h-100" data-simplebar>
             <ul class="metismenu left-sidenav-menu">
-                <li class="menu-label mt-0">Setting and User Preference</li>
+                <li class="menu-label mt-0">{{ __('messages.setting_name') }}</li>
                 <li>
                     <a href="pages-profile"> <i data-feather="user"
                             class="align-self-center menu-icon" ></i><span>Profile Details</span></a>
@@ -41,7 +41,7 @@
                 </li>
                 <li>
                     <a href="apps-language"> <i class="dripicons-blog"
-                            class="align-self-center menu-icon"></i><span>Language</span></a>
+                            class="align-self-center menu-icon"></i><span>{{ __('messages.language') }}</span></a>
                 </li>
                 <li>
                     <a href="apps-payment"> <i class="dripicons-card"
@@ -271,4 +271,8 @@
         </div>
     </div>
 
-    
+@section('script')
+<script src="{{ URL::asset('assets/js/app.js') }}"></script>
+<script src="{{ URL::asset('assets/js/displayMode.js') }}"></script>
+<script src="{{ asset('assets/js/font-size.js') }}"></script>
+@endsection

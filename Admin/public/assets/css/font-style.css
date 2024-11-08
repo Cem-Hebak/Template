@@ -1,11 +1,11 @@
-.font-small {
-    font-size: 12px; /* Small font size */
+.font-small * {
+    font-size: 12px;
 }
 
-.font-medium {
-    font-size: 16px; /* Medium font size (default) */
+.font-medium * {
+    font-size: 16px;
 }
 
-.font-large {
-    font-size: 20px; /* Large font size */
+.font-large * {
+    font-size: 20px;
 }

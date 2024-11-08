@@ -15,14 +15,17 @@
 
     <body data-layout="horizontal" data-sidebar="dark">
         @include('layouts.horizontal')
-            <div class="page-wrapper">
-                <div class="page-content">
-                    <div class="container-fluid">
-                        @yield('content')
-                    </div>
-                    @include('layouts.footer')
+        <div class="page-wrapper">
+            <div class="page-content">
+                <div class="container-fluid">
+                    @yield('content')
                 </div>
+                @include('layouts.footer')
             </div>
-            @include('layouts.vendor-scripts')
+        </div>
+        @include('layouts.vendor-scripts')
+
+        <!-- Include font-size.js -->
+        <script src="{{ asset('assets/js/font-size.js') }}"></script>
     </body>
 </html>

@@ -135,4 +135,5 @@
             }
         });
     </script>
+    <script src="{{ asset('assets/js/font-size.js') }}"></script>
 @endsection
