@@ -261,13 +261,6 @@
                 </li>
             </ul>
 
-            <div class="update-msg text-center">
-                <a href="javascript:void(0);" class="float-end close-btn text-black" data-dismiss="update-msg"
-                    aria-label="Close" aria-hidden="true">
-                    <i class="mdi mdi-close"></i>
-                </a>
-                <a href="javascript: void(0);" class="btn btn-outline-warning btn-sm">Upgrade your plan</a>
-            </div>
         </div>
     </div>
 
