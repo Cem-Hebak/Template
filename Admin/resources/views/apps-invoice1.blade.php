@@ -3,6 +3,7 @@
 
 
 @section('content')
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <style>
         .button-right {
             margin-left: auto;
@@ -161,4 +162,5 @@
 @section('script')
 <script src="{{ URL::asset('assets/js/app.js') }}"></script>
 <script src="{{ URL::asset('assets/js/displayMode.js') }}"></script>
+<script src="{{ asset('assets/js/font-size.js') }}"></script>
 @endsection
