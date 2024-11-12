@@ -41,6 +41,9 @@ Route::post('/update-password/{id}', [App\Http\Controllers\HomeController::class
 Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginPage'])->name('login');
 Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login'])->name('login.post');
 
+//logout
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
 //Sign up
 Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'register'])->name('register.post');

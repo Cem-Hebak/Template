@@ -118,14 +118,17 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form> -->
-                    <a class="dropdown-item" href="javascript:void(0);" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <!-- <a class="dropdown-item" href="javascript:void(0);" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
     <i data-feather="power" class="align-self-center icon-xs icon-dual me-1"></i>
-    <span key="t-logout">Logout ke bang</span>
+    <span key="t-logout">Logout</span>
 </a>
 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
     @csrf
-</form>
-
+</form> -->
+<a class="dropdown-item" href="javascript:void();" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i data-feather="power" class="align-self-center icon-xs icon-dual me-1"></i> <span key="t-logout">Logout</span></a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </div>
             </li>
         </ul><!--end topbar-nav-->

@@ -45,4 +45,13 @@ class LoginController extends Controller
     {
         return view('index'); // or redirect to the main dashboard view
     }
+    public function logout(Request $request)
+    {
+    Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+
+    return redirect()->route('login'); // Redirects to the login page
+    }
+
 }
