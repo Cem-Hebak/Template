@@ -33,6 +33,11 @@
                         <li class="nav-item"><a class="nav-link" href="apps-invoice"><i
                                     class="ti-control-record"></i>Other Notifications</a></li>
                     </ul>
+            
+                <li class="menu-label mt-0">Main</li>
+                
+                <li>
+                <a href="index"> <i data-feather="home" class="align-self-center menu-icon"></i><span>Dashboard</span></a>
                 </li>
                 <li>
                     <a href="apps-invoice1"> <i class="ti-star"
