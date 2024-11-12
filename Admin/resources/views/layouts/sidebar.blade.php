@@ -14,7 +14,13 @@
         <!--end logo-->
         <div class="menu-content h-100" data-simplebar>
             <ul class="metismenu left-sidenav-menu">
+                <li class="menu-label mt-0">Main</li>
+                
+                <li>
+                <a href="index"> <i data-feather="home" class="align-self-center menu-icon"></i><span>Dashboard</span></a>
+                </li>
                 <li class="menu-label mt-0">{{ __('messages.setting_name') }}</li>
+                
                 <li>
                     <a href="pages-profile"> <i data-feather="user"
                             class="align-self-center menu-icon" ></i><span>Profile Details</span></a>
@@ -34,11 +40,7 @@
                                     class="ti-control-record"></i>Other Notifications</a></li>
                     </ul>
             
-                <li class="menu-label mt-0">Main</li>
                 
-                <li>
-                <a href="index"> <i data-feather="home" class="align-self-center menu-icon"></i><span>Dashboard</span></a>
-                </li>
                 <li>
                     <a href="apps-invoice1"> <i class="ti-star"
                             class="align-self-center menu-icon"></i><span>Accessability</span><span

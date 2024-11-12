@@ -6,6 +6,7 @@
 @endsection
 
     @section('content')
+    <link rel="stylesheet" href="{{ asset('assets/css/font-style.css') }}">
         @component('components.breadcrumb')
             @slot('li_1') SeKad @endslot
             @slot('li_2') Dashboard @endslot
@@ -209,4 +210,6 @@
         <script src="{{ URL::asset('assets/plugins/apex-charts/apexcharts.min.js') }}"></script>
         <script src="{{ URL::asset('assets/js/pages/jquery.sales_dashboard.init.js') }}"></script>
         <script src="{{ URL::asset('assets/js/app.js') }}"></script>
+        <script src="{{ URL::asset('assets/js/displayMode.js') }}"></script>
+        <script src="{{ asset('assets/js/font-size.js') }}"></script>
 @endsection
