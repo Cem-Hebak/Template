@@ -79,5 +79,6 @@
             @yield('content')
         </main>
     </div>
+    <script src="{{ asset('assets/js/font-size.js') }}"></script>
 </body>
 </html>

@@ -1,33 +1,36 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Root route
+Route::get('/', [HomeController::class, 'root'])->name('root');
 
+// Authentication routes
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'root'])->name('root');
+// Profile update routes
+Route::post('/update-profile/{id}', [HomeController::class, 'updateProfile'])->name('updateProfile');
+Route::post('/update-password/{id}', [HomeController::class, 'updatePassword'])->name('updatePassword');
 
-Route::post('/update-profile/{id}', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateProfile');
+// Language switch route
+Route::get('/switch-language/{lang}', [LanguageController::class, 'switchLanguage'])->name('switch.language');
 
-Route::get('{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
+// Catch-all route (placed last)
+Route::get('{any}', [HomeController::class, 'index'])->name('index')->where('any', '.*');
+
+
 
 Route::post('/update-password/{id}', [App\Http\Controllers\HomeController::class, 'updatePassword'])->name('updatePassword');
 
