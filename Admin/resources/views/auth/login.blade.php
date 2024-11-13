@@ -10,7 +10,11 @@
 </head>
 <body>
     <div class="login-box">
-        <h2>SeKAD</h2>
+    <a href="index" class="logo logo-admin">
+        <img src="{{ URL::asset('assets/images/logo-sm-dark.png') }}" height="50"
+            alt="logo" class="auth-logo">
+    </a>
+    <h2>SeKAD</h2>
         <p>Log In</p>
         <!-- Error message -->
         @if ($errors->has('login_error'))
@@ -26,14 +30,17 @@
             <button type="submit" class="btn-login">Log In</button>
         </form>
 
-        <a href="#">Forgot your password? </a>
+        <a href="password/reset">Forgot your password? </a>
 
         @if (session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
             </div>
         @endif
+        
 
     </div>
+    
 </body>
+
 </html>

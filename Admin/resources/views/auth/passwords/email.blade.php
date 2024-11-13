@@ -59,7 +59,7 @@
                                             class="text-primary ms-2">Sign in here</a></p>
                                 </div>
                                 <div class="card-body bg-light-alt text-center">
-                                    <span class="text-muted d-none d-sm-inline-block">Mannatthemes ©
+                                    <span class="text-muted d-none d-sm-inline-block">SeKAD ©
                                         <script>
                                             document.write(new Date().getFullYear())
                                         </script>
