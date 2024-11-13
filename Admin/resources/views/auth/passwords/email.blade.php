@@ -1,12 +1,9 @@
 @extends('layouts.master-without_nav')
 
-@section('title')
-    Recover Password
-@endsection
+@section('title') Recover Password @endsection
 
 @section('content')
-
-    <body class="account-body accountbg">
+<body class="account-body accountbg">
         <div class="container">
             <div class="row vh-100 d-flex justify-content-center">
                 <div class="col-12 align-self-center">
@@ -16,12 +13,10 @@
                                 <div class="card-body p-0 auth-header-box">
                                     <div class="text-center p-3">
                                         <a href="index" class="logo logo-admin">
-                                            <img src="{{ URL::asset('assets/images/logo-sm-dark.png') }}" height="50"
-                                                alt="logo" class="auth-logo">
+                                            <img src="{{ URL::asset('assets/images/logo-sm-dark.png') }}" height="50" alt="logo" class="auth-logo">
                                         </a>
-                                        <h4 class="mt-3 mb-1 fw-semibold text-white font-18">Reset Password For SeKAD</h4>
-                                        <p class="text-muted  mb-0">Enter your Email and instructions will be sent to you!
-                                        </p>
+                                        <h4 class="mt-3 mb-1 fw-semibold text-white font-18">Reset Password For Dastone</h4>
+                                        <p class="text-muted  mb-0">Enter your Email and instructions will be sent to you!</p>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -30,40 +25,32 @@
                                             {{ session('status') }}
                                         </div>
                                     @endif
-                                    <form class="form-horizontal  auth-form" method="POST"
-                                        action="{{ route('password.email') }}">
+                                    <form class="form-horizontal  auth-form" method="POST" action="{{ route('password.email') }}">
                                         @csrf
                                         <div class="form-group mb-2">
                                             <label class="form-label" for="username">Email</label>
                                             <div class="input-group">
-                                                <input type="email"
-                                                    class="form-control @error('email') is-invalid @enderror" id="useremail"
-                                                    name="email" placeholder="Enter email" value="{{ old('email') }}"
-                                                    id="email">
-                                                @error('email')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
+                                                <input type="email" class="form-control @error('email') is-invalid @enderror" id="useremail" name="email" placeholder="Enter email" value="{{ old('email') }}" id="email">
+                                                    @error('email')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
                                             </div>
                                         </div>
 
                                         <div class="form-group mb-0 row">
                                             <div class="col-12 mt-2">
-                                                <button class="btn btn-primary w-100 waves-effect waves-light"
-                                                    type="submit">Reset <i class="fas fa-sign-in-alt ms-1"></i></button>
+                                                <button class="btn btn-primary w-100 waves-effect waves-light" type="submit">Reset <i class="fas fa-sign-in-alt ms-1"></i></button>
                                             </div>
                                         </div> <!--end form-group-->
                                     </form><!--end form-->
-                                    <p class="text-muted mb-0 mt-3">Remember It ? <a href="{{ url('login') }}"
-                                            class="text-primary ms-2">Sign in here</a></p>
+                                    <p class="text-muted mb-0 mt-3">Remember It ?  <a href="{{ url('login') }}" class="text-primary ms-2">Sign in here</a></p>
                                 </div>
                                 <div class="card-body bg-light-alt text-center">
-                                    <span class="text-muted d-none d-sm-inline-block">Mannatthemes ©
-                                        <script>
-                                            document.write(new Date().getFullYear())
-                                        </script>
-                                    </span>
+                                    <span class="text-muted d-none d-sm-inline-block">Mannatthemes © <script>
+                                        document.write(new Date().getFullYear())
+                                    </script></span>
                                 </div>
                             </div>
                         </div>
@@ -71,4 +58,5 @@
                 </div>
             </div>
         </div>
-    @endsection
+@endsection
+
