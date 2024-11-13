@@ -1,4 +1,4 @@
-    <div class="left-sidenav">
+<div class="left-sidenav">
         <!-- LOGO -->
         <div class="brand">
             <a href="index" class="logo">
@@ -15,16 +15,44 @@
         <div class="menu-content h-100" data-simplebar>
             <ul class="metismenu left-sidenav-menu">
                 <li class="menu-label mt-0">Main</li>
+                
                 <li>
-                    <a href="javascript: void(0);"> <i data-feather="home"
-                            class="align-self-center menu-icon"></i><span>Dashboard</span><span
+                <a href="index"> <i data-feather="home" class="align-self-center menu-icon"></i><span>Dashboard</span></a>
+                </li>
+                <li class="menu-label mt-0">{{ __('messages.setting_name') }}</li>
+                
+                <li>
+                    <a href="pages-profile"> <i data-feather="user"
+                            class="align-self-center menu-icon" ></i><span>Profile Details</span></a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);"> <i data-feather="bell"
+                            class="align-self-center menu-icon"></i><span>Notifications</span><span
                             class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                     <ul class="nav-second-level" aria-expanded="false">
-                        <li class="nav-item"><a class="nav-link" href="index"><i
-                                    class="ti-control-record"></i>Analytics</a></li>
-                        <li class="nav-item"><a class="nav-link" href="sales-index"><i
-                                    class="ti-control-record"></i>Sales</a></li>
+                        <li class="nav-item"><a class="nav-link" href="apps-invoice"><i
+                                    class="ti-control-record"></i>Reminders</a></li>
+                        <li class="nav-item"><a class="nav-link" href="apps-invoice"><i
+                                    class="ti-control-record"></i>Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="apps-invoice"><i
+                                    class="ti-control-record"></i>Chats</a></li>
+                        <li class="nav-item"><a class="nav-link" href="apps-invoice"><i
+                                    class="ti-control-record"></i>Other Notifications</a></li>
                     </ul>
+            
+                
+                <li>
+                    <a href="apps-invoice1"> <i class="ti-star"
+                            class="align-self-center menu-icon"></i><span>Accessability</span><span
+                            class="menu-arrow"></span></a>
+                </li>
+                <li>
+                    <a href="apps-language"> <i class="dripicons-blog"
+                            class="align-self-center menu-icon"></i><span>{{ __('messages.language') }}</span></a>
+                </li>
+                <li>
+                    <a href="apps-payment"> <i class="dripicons-card"
+                            class="align-self-center menu-icon"></i><span>Payments</span></a>
                 </li>
 
                 <li>
@@ -49,8 +77,6 @@
                                     class="ti-control-record"></i>Calendar</a></li>
                         <li class="nav-item"><a class="nav-link" href="apps-files"><i
                                     class="ti-control-record"></i>File Manager</a></li>
-                        <li class="nav-item"><a class="nav-link" href="apps-invoice"><i
-                                    class="ti-control-record"></i>Invoice</a></li>
                         <li class="nav-item"><a class="nav-link" href="apps-tasks"><i
                                     class="ti-control-record"></i>Tasks</a></li>
                         <li>
@@ -88,7 +114,7 @@
                     <ul class="nav-second-level" aria-expanded="false">
                         <li class="nav-item"><a class="nav-link" href="auth-login"><i
                                     class="ti-control-record"></i>Log in</a></li>
-                        <li class="nav-item"><a class="nav-link" href="auth-register"><i
+                        <li class="nav-item"><a class="nav-link" href="auth.register"><i
                                     class="ti-control-record"></i>Register</a></li>
                         <li class="nav-item"><a class="nav-link" href="auth-recover-pw"><i
                                     class="ti-control-record"></i>Recover Password</a></li>
@@ -236,9 +262,7 @@
                 </li>
 
                 <li>
-                    <a href="widgets"><i data-feather="layers"
-                            class="align-self-center menu-icon"></i><span>Widgets</span><span
-                            class="badge badge-soft-success menu-arrow">New</span></a>
+                    
                 </li>
 
                 <li>
@@ -264,14 +288,11 @@
                 </li>
             </ul>
 
-            <div class="update-msg text-center">
-                <a href="javascript:void(0);" class="float-end close-btn text-black" data-dismiss="update-msg"
-                    aria-label="Close" aria-hidden="true">
-                    <i class="mdi mdi-close"></i>
-                </a>
-                <h5 class="mt-3">Mannat Themes</h5>
-                <p class="mb-3">We Design and Develop Clean and High Quality Web Applications</p>
-                <a href="javascript: void(0);" class="btn btn-outline-warning btn-sm">Upgrade your plan</a>
-            </div>
         </div>
     </div>
+
+@section('script')
+<script src="{{ URL::asset('assets/js/app.js') }}"></script>
+<script src="{{ URL::asset('assets/js/displayMode.js') }}"></script>
+<script src="{{ asset('assets/js/font-size.js') }}"></script>
+@endsection

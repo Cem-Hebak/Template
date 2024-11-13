@@ -3,17 +3,13 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
 
-class CreateUsersTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
@@ -22,20 +18,53 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('mobilenumber');
+            $table->string('emergencymobilenumber')->nullable();
+            $table->string('role')->default('Student');
+            $table->string('class')->nullable();
             $table->string('avatar');
-            $table->rememberToken();
+            $table->string('remember_token', 100)->nullable();
             $table->timestamps();
+            $table->date('date_of_birth')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('ic_number')->unique();
+            $table->string('nationality')->default('Malaysian');
+            $table->string('address')->nullable();
+            $table->string('fname')->nullable();
+            $table->string('fcontact')->nullable();
+            $table->string('foccupation')->nullable();
+            $table->string('mname')->nullable();
+            $table->string('mcontact')->nullable();
+            $table->string('moccupation')->nullable();
+            $table->string('gname')->default('Not Applicable');
+            $table->string('gcontact')->default('Not Applicable');
+            $table->string('goccupation')->default('Not Applicable');
+            $table->string('blood_type')->nullable();
+            $table->string('allergies')->default('None');
         });
-        DB::table('users')->insert(array('name'=>'admin','email'=>'admin@mannatthemes.com', 'avatar' => '', 'password'=>Hash::make('123456'), 'mobilenumber'=> '1234567890'));
+
+        Schema::create('password_reset_tokens', function (Blueprint $table) {
+            $table->string('email')->primary();
+            $table->string('token');
+            $table->timestamp('created_at')->nullable();
+        });
+
+        Schema::create('sessions', function (Blueprint $table) {
+            $table->string('id')->primary();
+            $table->foreignId('user_id')->nullable()->index();
+            $table->string('ip_address', 45)->nullable();
+            $table->text('user_agent')->nullable();
+            $table->longText('payload');
+            $table->integer('last_activity')->index();
+        });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('users');
+        Schema::dropIfExists('password_reset_tokens');
+        Schema::dropIfExists('sessions');
     }
-}
+};

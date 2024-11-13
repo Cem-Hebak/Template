@@ -8,8 +8,7 @@
 
 @section('content')
 @component('components.breadcrumb')
-@slot('li_1') Dastone @endslot
-@slot('li_2') Pages @endslot
+@slot('li_1') SeKAD @endslot
 @slot('li_3') Profile @endslot
 @slot('title') Profile @endslot
 @endcomponent
@@ -373,19 +372,140 @@
                         <!--end row-->
                         <div class="card">
                             <div class="card-body">
-                                <img src="{{ URL::asset('assets/images/widgets/1.jpg') }}" alt="" class="img-fluid">
-                                <div class="post-title mt-4">
-                                    <div class="row">
-                                        <div class="col">
-                                            <span class="badge badge-soft-primary">Natural</span>
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-auto">
-                                            <span class="text-muted"><i class="far fa-calendar me-1"></i>02 July 2020</span>
-                                        </div>
-                                        <!--end col-->
-                                    </div>
-                                    <!--end row-->
+                            <h4 class="card-title" style="font-size: 20px;">Biodata</h4>
+                                <table class="table table-striped table-bordered dt-responsive nowrap" style="width: 100%;">
+                                    <thead>
+                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th style="width: 150px;">Date of Birth</th>
+                                            <td>{{ Auth::user()->DateofBirth }}</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Gender</th>
+                                            <td>{{ Auth::user()->Gender }}</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Identification Card Number</th>
+                                            <td>{{ Auth::user()->IdentificationCardNumber }}</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Nationality</th>
+                                            <td>{{ Auth::user()->Nationality }}</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Address</th>
+                                            <td>{{ Auth::user()->Address }}</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Role</th>
+                                            <td>{{ Auth::user()->Role }}</td>
+                                            
+                                        </tr>
+                                        <!-- <tr>
+                                            <th style="width: 150px;">Class</th>
+                                            <td>{{ Auth::user()->Class }}</td>
+                                            
+                                        </tr>
+                                        <tr> -->
+                                        @if(Auth::user()->Role == 'Student'){
+
+                                            <tr>
+                                                <th style="width: 150px;">Class</th>
+                                                <td>{{ Auth::user()->Class }}</td>
+                                                
+                                            </tr>
+                                            }
+                                            @elseif(Auth::user()->Role == 'Teacher'){
+
+                                            <tr>
+                                                <th style="width: 150px;">Class Teacher</th>
+                                                <td>{{ Auth::user()->Class }}</td>
+                                                
+                                            </tr>
+                                            }
+                                            @elseif(Auth::user()->Role == 'Staff'){
+                                                <tr>
+                                                <th style="width: 150px;">Location</th>
+                                                <td>{{ Auth::user()->Class }}</td>
+                                                
+                                            </tr>
+                                            }
+                                            @elseif(Auth::user()->Role == 'Admin'){
+                                                
+                                            }
+                                            @endif
+                                            <th style="width: 150px;">Contact</th>
+                                            <td>{{ Auth::user()->mobilenumber }}</td>
+                                            
+                                        </tr>
+                                       
+                                        <tr>
+                                            <th style="width: 150px;">Email</th>
+                                            <td>{{ Auth::user()->email }}</td>
+                                            
+                                        </tr> 
+                                    </tbody>
+                                </table>
+                                <h4 class="card-title" style="font-size: 20px;">Family Information</h4>
+                                <table class="table table-striped table-bordered dt-responsive nowrap" style="width: 100%;">
+                                    <thead>
+                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th style="width: 150px;">Father's Name</th>
+                                            <td>{{ Auth::user()->Fname }}</td>
+                                            
+                                            </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Father's Contact</th>
+                                            <td>{{ Auth::user()->Fcontact }}</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Father's Occupation</th>
+                                            <td>{{ Auth::user()->Foccupation }}</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Mother's Name</th>
+                                            <td>{{ Auth::user()->Mname }}</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Mother's Contact</th>
+                                            <td>{{ Auth::user()->Mcontact }}</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Mother's Occupation</th>
+                                            <td>{{ Auth::user()->Moccupation }}</td>
+                                            
+                                        </tr>   
+                                        <tr>
+                                            <th style="width: 150px;">Guardian's Name</th>
+                                            <td>{{ Auth::user()->Gname }}</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Guardian's Contact</th>
+                                            <td>{{ Auth::user()->Gcontact }}</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 150px;">Guardian's Occupation</th>
+                                            <td>{{ Auth::user()->Goccupation }}</td>
+                                            
+                                        </tr>          
+                                    </tbody>
+                                </table>
 
                                     <h5 href="#" class="font-20 fw-bold d-block mt-3 mb-4">There is nothing more beautiful than nature.</h5>
                                     <span class="font-15 bg-light py-2 px-3 rounded">Taking pictures is savouring life intensely.</span>
@@ -1179,6 +1299,11 @@
                             </div>
                         </div>
 
+<div class="button-items" style="display: flex; justify-content: center; gap: 10px;">
+<button type="button" class="btn btn-primary btn-lg" onclick="printProfile()">Download Profile</button>
+    <button type="button" class="btn btn-primary btn-lg">Past Exam Records</button>
+    <button type="button" class="btn btn-primary btn-lg">Attendance Analytics</button>
+</div>
 
                         <div class="row mb-4">
                             <label for="avatar" class="col-sm-3">Profile Picture</label>
@@ -1211,6 +1336,10 @@
 
 
 <script>
+    function printProfile() {
+        window.print();
+    }
+    
     $('#update-profile').on('submit', function(event) {
         event.preventDefault();
         var Id = $('#data_id').val();
@@ -1252,4 +1381,6 @@
 <script src="{{ URL::asset('assets/plugins/lightpick/lightpick.js') }}"></script>
 <script src="{{ URL::asset('assets/js/pages/jquery.profile.init.js') }}"></script>
 <script src="{{ URL::asset('assets/js/app.js') }}"></script>
+<script src="{{ URL::asset('assets/js/displayMode.js') }}"></script>
+<script src="{{ asset('assets/js/font-size.js') }}"></script>
 @endsection
