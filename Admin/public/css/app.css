@@ -205,7 +205,7 @@ strong {
   font-weight: bolder;
 }
 
-small {
+small, .small {
   font-size: 0.875em;
 }
 
@@ -213,17 +213,6 @@ mark, .mark {
   padding: 0.2em;
   background-color: #fcf8e3;
 }
-
-body.dark {
-  background-color: #000;
-}
-
-body.light {
-  background-color: #ffffff;
-}
-
-/* Adjust colors of other components as necessary */
-
 
 sub,
 sup {
@@ -1173,7 +1162,7 @@ progress {
 
   .col-md-4 {
     flex: 0 0 auto;
-    width: 70%;
+    width: 33.33333333%;
   }
 
   .col-md-5 {
@@ -1396,7 +1385,7 @@ progress {
 
   .col-lg-6 {
     flex: 0 0 auto;
-    width: 25%;
+    width: 50%;
   }
 
   .col-lg-7 {
@@ -7418,10 +7407,6 @@ textarea.form-control-lg {
   margin-left: 3rem !important;
 }
 
-.ms-6 {
-  margin-left: 10rem !important;
-}
-
 .ms-auto {
   margin-left: auto !important;
 }
@@ -8446,13 +8431,6 @@ textarea.form-control-lg {
   .ms-sm-auto {
     margin-left: auto !important;
   }
-
-.button-right {
-    margin-left: auto;
-    margin-right: 20px; 
-    display: inline-block;
-}
-
 
   .p-sm-0 {
     padding: 0 !important;
