@@ -92,7 +92,7 @@
                                         </tr>
                                         <tr>
                                             <th style="width: 150px;">Identification Card Number</th>
-                                            <td>{{ Auth::user()->IdentificationCardNumber }}</td>
+                                            <td>{{ Auth::user()->ic_number }}</td>
                                             
                                         </tr>
                                         <tr>
