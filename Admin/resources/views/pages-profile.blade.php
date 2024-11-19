@@ -27,8 +27,8 @@
                         <div class="col-lg-4 align-self-center mb-3 mb-lg-0">
                             <div class="dastone-profile-main">
                                 <div class="dastone-profile-main-pic">
-                                    <!-- <img src="{{ (isset(Auth::user()->avatar) && Auth::user()->avatar != '') ? asset(Auth::user()->avatar) : asset('/assets/images/users/user-1.jpg') }}" alt="" height="110" class="rounded-circle">
-                                    <img src="{{ asset(Auth::user()->avatar) }}" alt="" height="110" class="rounded-circle"> -->
+                                    <img src="{{ (isset(Auth::user()->avatar) && Auth::user()->avatar != '') ? asset(Auth::user()->avatar) : asset('/assets/images/users/user-1.jpg') }}" alt="" height="110" class="rounded-circle">
+                                    <img src="{{ asset(Auth::user()->avatar) }}" alt="" height="110" class="rounded-circle">
                                     
                                     <span class="dastone-profile_main-pic-change" data-bs-toggle="modal" data-bs-target="#profile-edit">
                                         <i class="mdi mdi-pencil"></i>
