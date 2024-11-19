@@ -221,7 +221,7 @@
 
                                         <tr>
                                             <th style="width: 150px;">Blood Type</th>
-                                            <td>{{ Auth::user()->BloodType }}</td>
+                                            <td>{{ Auth::user()->blood_type }}</td>
                                             
                                         </tr>
                                         <tr>

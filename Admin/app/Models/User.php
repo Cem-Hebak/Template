@@ -24,6 +24,21 @@ class User extends Authenticatable
         'password',
         'mobilenumber',
         'avatar',
+        'gender' ,
+        'date_of_birth' ,
+        'address' ,
+        'fname' ,
+        'fcontact' ,
+        'foccupation' ,
+        'mname' ,
+        'mcontact' ,
+        'moccupation' ,
+        'gname' ,
+        'gcontact' ,
+        'goccupation',
+        'blood_type' ,
+        'allergies' ,
+        // faiz konek
     ];
 
     /**
