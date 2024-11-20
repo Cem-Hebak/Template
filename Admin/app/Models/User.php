@@ -38,7 +38,7 @@ class User extends Authenticatable
         'goccupation',
         'blood_type' ,
         'allergies' ,
-        // faiz konek
+        
     ];
 
     /**
