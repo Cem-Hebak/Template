@@ -25,6 +25,7 @@ class User extends Authenticatable
         'mobilenumber',
         'avatar',
         'gender' ,
+        'role' ,
         'date_of_birth' ,
         'address' ,
         'fname' ,

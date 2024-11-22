@@ -36,6 +36,7 @@ class RegisterController extends Controller
             'mobilenumber' => 'required|string|max:15',
             'date_of_birth' => 'nullable|date',
             'gender' => 'nullable|string',
+            'role' => 'nullable|string',
             'address' => 'nullable|string',
             'nationality' => 'nullable|string',
             'fname' => 'nullable|string',
@@ -87,7 +88,7 @@ class RegisterController extends Controller
             'blood_type' => $request->blood_type,
             'allergies' => $request->allergies ?? 'None',
             'password' => Hash::make($request->password),
-            'role' => 'Student', // Default role, modify if necessary
+            'role' => $request->role, // Default role, modify if necessary
             'avatar' => $avatarPath, // You can use a default avatar if needed
         ]);
 

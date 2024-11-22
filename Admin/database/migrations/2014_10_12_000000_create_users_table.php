@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('mobilenumber');
             $table->string('emergencymobilenumber')->nullable();
-            $table->string('role')->default('Student');
+            $table->string('role')->nullable();
             $table->string('class')->nullable();
             $table->string('avatar');
             $table->string('remember_token', 100)->nullable();
