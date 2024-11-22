@@ -14,12 +14,12 @@ class CreateAttendanceRecordsTable extends Migration
     public function up()
     {
         Schema::create('attendance_records', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('student_id')->constrained('users')->onDelete('cascade'); // Foreign key for the student
-            $table->date('date'); // Date of attendance
-            $table->boolean('is_present'); // Attendance status
-            $table->string('marked_by')->nullable(); // Teacher who marked the attendance
-            $table->timestamps();
+            $table->id(); // Primary key
+            $table->string('ic_number'); // Foreign key for the student
+            $table->foreign('ic_number')->references('ic_number')->on('users')->onDelete('cascade');
+            $table->date('attendance_date'); // Date of attendance
+            $table->boolean('is_present'); // Whether the student is present or absent
+            $table->timestamps(); // Created_at and updated_at
         });
     }
 

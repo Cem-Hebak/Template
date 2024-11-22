@@ -15,11 +15,13 @@ class CreateAbsenceProofsTable extends Migration
     {
         Schema::create('absence_proofs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('student_id')->constrained('users')->onDelete('cascade'); // Foreign key for the student
+            $table->string('ic_number'); // Use string for the IC number
+            $table->foreign('ic_number')->references('ic_number')->on('users')->onDelete('cascade'); // Foreign key for the student
             $table->string('proof_file'); // Path to the uploaded proof file
             $table->text('reason')->nullable(); // Optional reason for absence
             $table->boolean('is_approved')->nullable(); // Approval status by teacher/admin
-            $table->foreignId('reviewed_by')->nullable()->constrained('users')->onDelete('set null'); // Teacher/admin who reviewed
+            $table->string('reviewed_by')->nullable(); // Teacher/admin who reviewed (IC number)
+            $table->foreign('reviewed_by')->references('ic_number')->on('users')->onDelete('set null'); // Reference teacher/admin by IC number
             $table->timestamps();
         });
     }
