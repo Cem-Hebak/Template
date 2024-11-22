@@ -359,6 +359,13 @@
 
                 <label for="nationality">Nationality</label>
                 <input type="text" name="nationality" placeholder="Nationality" value="{{ old('nationality', 'Malaysian') }}" readonly>
+                
+                <label for="role">Roles</label>
+                <select name="role">
+                    <option value="">Select Roles</option>
+                    <option value="Student" {{ old('role') == 'Student' ? 'selected' : '' }}>Student</option>
+                    <option value="Teacher" {{ old('role') == 'Teacher' ? 'selected' : '' }}>Teacher</option>
+                </select>
             </div>
 
             <!-- Family Information Section -->
