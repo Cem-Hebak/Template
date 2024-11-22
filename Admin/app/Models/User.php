@@ -25,6 +25,7 @@ class User extends Authenticatable
         'mobilenumber',
         'avatar',
         'gender' ,
+        'role' ,
         'date_of_birth' ,
         'address' ,
         'fname' ,
@@ -62,5 +63,25 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Get the attendance records for the user.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function attendanceRecords()
+    {
+        return $this->hasMany(AttendanceRecord::class);
+    }
+
+    /**
+     * Get the absence proofs submitted by the user.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function absenceProofs()
+    {
+        return $this->hasMany(AbsenceProof::class);
     }
 }
