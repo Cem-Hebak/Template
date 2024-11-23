@@ -50,5 +50,4 @@ Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, '
 Route::post('/password-recovery', [PasswordRecoveryController::class, 'sendResetLink'])->name('password.recovery');
 
 //teacher division
-// Route::get('/users', [App\Http\Controllers\UserController::class, 'showUsers'])->name('users.index');
-Route::get('/Teacher-Class-Division', [App\Http\Controllers\UserController::class, 'showUsers'])->name('users.index');
+Route::get('/users', [UserController::class, 'showAllUsers'])->name('users.index');
