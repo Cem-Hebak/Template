@@ -124,6 +124,12 @@
                                     class="ti-control-record"></i>Error 404</a></li>
                         <li class="nav-item"><a class="nav-link" href="auth-500"><i
                                     class="ti-control-record"></i>Error 500</a></li>
+
+                        @if(Auth::user()->Role == 'Staff')  
+                        <!-- only staff can see this button -->
+                            <li class="nav-item"><a class="nav-link" href="Teacher-Class-Division"><i
+                                    class="ti-control-record"></i>Teacher Class Division</a></li>
+                        @endif
                     </ul>
                 </li>
 
