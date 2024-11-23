@@ -83,4 +83,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(AbsenceProof::class);
     }
+    public function showAllUsers()
+    {
+        // Retrieve all users
+        $users = User::all();
+
+        // Pass the data to a view
+        return view('users.index', compact('users'));
+    }
 }

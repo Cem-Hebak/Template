@@ -50,4 +50,11 @@ Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, '
 Route::post('/password-recovery', [PasswordRecoveryController::class, 'sendResetLink'])->name('password.recovery');
 
 //teacher division
-Route::get('/users', [UserController::class, 'showAllUsers'])->name('users.index');
+Route::get('listuser', function() {
+    // Fetch all users from the database
+    $Users = DB::table('users')->get();
+
+    // Return the view and pass the users data
+    return view('listuser', ['users' => $Users]);
+});
+

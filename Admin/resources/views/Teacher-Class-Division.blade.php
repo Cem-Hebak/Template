@@ -79,25 +79,13 @@
                             <h4 class="card-title" style="font-size: 20px;">Biodata</h4>
                                 <table class="table table-striped table-bordered dt-responsive nowrap" style="width: 100%;">
                                 <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Role</th>
-            <th>Created At</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($users as $user)
-        <tr>
-            <td>{{ $user->id }}</td>
-            <td>{{ $user->name }}</td>
-            <td>{{ $user->email }}</td>
-            <td>{{ $user->role }}</td>
-            <td>{{ $user->created_at }}</td>
-        </tr>
-        @endforeach
-    </tbody>
+                                  
+                                    
+                                    @foreach($Users as $key => $data)
+                                        <tr>    
+                                        <th>{{$data->name}}</th>
+                                      
+                                    @endforeach
                                 </table>
 
                             </div>
@@ -130,6 +118,14 @@
 
 
 <script>
+    public function showAllUsers()
+    {
+        // Retrieve all users
+        $users = User::all();
+
+        // Pass the data to a view
+        return view('users.index', compact('users'));
+    }
     function printProfile() {
         window.print();
     }
