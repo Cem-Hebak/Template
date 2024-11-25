@@ -8,7 +8,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PasswordRecoveryController;
-
+use App\Http\Controllers\AttendanceController;
 
 
 /*
@@ -48,3 +48,7 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'register'])->name('register.post');
 Route::post('/password-recovery', [PasswordRecoveryController::class, 'sendResetLink'])->name('password.recovery');
+
+
+Route::get('/attendance', [\App\Http\Controllers\AttendanceController::class, 'showAttendance'])->name('attendance.show');
+Route::get('/attendance', [\App\Http\Controllers\AttendanceController::class, 'storeAttendance'])->name('attendance.store');

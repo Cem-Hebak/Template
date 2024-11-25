@@ -20,7 +20,7 @@
                 <a href="index"> <i data-feather="home" class="align-self-center menu-icon"></i><span>Dashboard</span></a>
                 </li>
                 <li>
-                <a href="attendance-record"> <i data-feather="home" class="align-self-center menu-icon"></i><span>Attendance Record</span></a>
+                <a href="attendance"> <i data-feather="home" class="align-self-center menu-icon"></i><span>Attendance Record</span></a>
                 </li>
                 <li class="menu-label mt-0">{{ __('messages.setting_name') }}</li>
                 

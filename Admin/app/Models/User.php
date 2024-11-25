@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -71,7 +72,7 @@ class User extends Authenticatable
      */
     public function attendanceRecords()
     {
-        return $this->hasMany(AttendanceRecord::class);
+        return $this->hasMany(AttendanceRecord::class, 'ic_number', 'ic_number');
     }
 
     /**
