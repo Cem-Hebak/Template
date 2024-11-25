@@ -29,15 +29,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($students as $Student)
-                                        <tr>
-                                            <td>{{ $Student->name }}</td>
-                                            <td>{{ $Student->ic_number }}</td>
-                                            <td>
-                                                <input type="checkbox" name="attendance[]" value="{{ $student->id }}">
-                                            </td>
-                                        </tr>
-                                    @endforeach
+                                    @if($students->isEmpty())
+                                        <tr><td colspan="3">No students found</td></tr>
+                                    @else
+                                        @foreach($students as $student)
+                                            <tr>
+                                                <td>{{ $student->name }}</td>
+                                                <td>{{ $student->ic_number }}</td>
+                                                <td>
+                                                    <input type="checkbox" name="attendance[]" value="{{ $student->id }}">
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    @endif
                                 </tbody>
                             </table>
                         </div>

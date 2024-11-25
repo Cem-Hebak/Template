@@ -75,13 +75,6 @@ class User extends Authenticatable
         return $this->hasMany(AttendanceRecord::class, 'ic_number', 'ic_number');
     }
 
-    /**
-     * Get the absence proofs submitted by the user.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function absenceProofs()
-    {
-        return $this->hasMany(AbsenceProof::class);
-    }
+    
 }
+?>

@@ -1,3 +1,4 @@
+<?php
 namespace App\Http\Controllers;
 
 use App\Models\User; // Import the User model
@@ -9,12 +10,13 @@ class AttendanceController extends Controller
     // Show the attendance form
     public function showAttendance()
     {
-        // Fetch students with the role 'student' (name and IC number only)
-        $students = User::where('role', 'Student')->select('id', 'name', 'ic_number')->get();
+        // // Fetch students with the role 'student' (name and IC number only)
+        // $students = User::where('role', 'Student')->select('id', 'name', 'ic_number')->get();
+        // return view('attendance', compact('students')); // Pass data to the Blade template
+        $students = User::all(); // Fetch all users temporarily to verify
 
+        // Debug to ensure data is being retrieved
         dd($students);
-
-        return view('attendance', compact('students')); // Pass data to the Blade template
     }
 
     // Store attendance records
@@ -45,3 +47,4 @@ class AttendanceController extends Controller
         return redirect()->route('attendance.show')->with('success', 'Attendance recorded successfully!');
     }
 }
+?>

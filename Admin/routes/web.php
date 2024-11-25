@@ -49,6 +49,7 @@ Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 's
 Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'register'])->name('register.post');
 Route::post('/password-recovery', [PasswordRecoveryController::class, 'sendResetLink'])->name('password.recovery');
 
+Route::get('/attendance', [AttendanceController::class, 'showAttendance'])->name('attendance.show');
+Route::post('/attendance', [AttendanceController::class, 'storeAttendance'])->name('attendance.store');
 
-Route::get('/attendance', [\App\Http\Controllers\AttendanceController::class, 'showAttendance'])->name('attendance.show');
-Route::get('/attendance', [\App\Http\Controllers\AttendanceController::class, 'storeAttendance'])->name('attendance.store');
+

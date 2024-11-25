@@ -1,3 +1,4 @@
+<?php
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -14,3 +15,4 @@ class AttendanceRecord extends Model
         return $this->belongsTo(User::class, 'ic_number', 'ic_number');
     }
 }
+?>
