@@ -10,13 +10,15 @@ class AttendanceController extends Controller
     // Show the attendance form
     public function showAttendance()
     {
-        // // Fetch students with the role 'student' (name and IC number only)
-        // $students = User::where('role', 'Student')->select('id', 'name', 'ic_number')->get();
-        // return view('attendance', compact('students')); // Pass data to the Blade template
-        $students = User::all(); // Fetch all users temporarily to verify
+        $students = User::all();
+            if ($students->isEmpty()) {
+        dd('No students found');
+            } else {
+        dd($students); // Check if students are returned
+            }
 
-        // Debug to ensure data is being retrieved
-        dd($students);
+        return view('attendance', compact('students'));
+
     }
 
     // Store attendance records

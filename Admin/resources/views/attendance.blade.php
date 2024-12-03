@@ -29,9 +29,6 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @if($students->isEmpty())
-                                        <tr><td colspan="3">No students found</td></tr>
-                                    @else
                                         @foreach($students as $student)
                                             <tr>
                                                 <td>{{ $student->name }}</td>
@@ -41,7 +38,6 @@
                                                 </td>
                                             </tr>
                                         @endforeach
-                                    @endif
                                 </tbody>
                             </table>
                         </div>
