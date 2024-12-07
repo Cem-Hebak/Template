@@ -61,6 +61,12 @@ class DatabaseUserProvider implements UserProvider
         return $this->getGenericUser($user);
     }
 
+    public function getAllUsers()
+    {
+        $users = $this->conn->table($this->table)->get(); // Retrieve all users
+        return $users;
+    }
+
     /**
      * Retrieve a user by their unique identifier and "remember me" token.
      *

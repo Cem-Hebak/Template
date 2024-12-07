@@ -13,7 +13,7 @@ trait Authenticatable
 
     /**
      * Get the name of the unique identifier for the user.
-     *
+     *E:\UTM\App Dev\Template\Admin\vendor\laravel\framework\src\Illuminate\Auth\Authenticatable.php
      * @return string
      */
     public function getAuthIdentifierName()

@@ -7,10 +7,10 @@ class AttendanceRecord extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['student_id', 'date', 'is_present', 'marked_by'];
+    protected $fillable = ['ic_number', 'date', 'is_present', 'marked_by'];
 
     public function student()
     {
-        return $this->belongsTo(User::class, 'student_id');
+        return $this->belongsTo(User::class, 'ic_number');
     }
 }
