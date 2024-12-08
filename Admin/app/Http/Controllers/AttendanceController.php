@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Models\User; // Import the User model
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+
 
 class AttendanceController extends Controller
 {
@@ -11,11 +13,12 @@ class AttendanceController extends Controller
     public function showAttendance()
     {
         $students = User::all();
-            if ($students->isEmpty()) {
-        dd('No students found');
-            } else {
-        dd($students); // Check if students are returned
-            }
+
+        // Check if students exist and log or display a message
+        if ($students->isEmpty()) {
+            Log::info('No students found in the database.');
+            return view('attendance')->with('error', 'No students found.');
+        }
 
         return view('attendance', compact('students'));
 

@@ -53,3 +53,5 @@ Route::get('/attendance', [AttendanceController::class, 'showAttendance'])->name
 Route::post('/attendance', [AttendanceController::class, 'storeAttendance'])->name('attendance.store');
 
 
+
+

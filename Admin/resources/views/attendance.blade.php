@@ -17,6 +17,13 @@
                         </div>
                     @endif
 
+                    <!-- Display error message -->
+                    @if (session('error'))
+                        <div class="alert alert-danger">
+                            {{ session('error') }}
+                        </div>
+                    @endif
+
                     <form method="POST" action="{{ route('attendance.store') }}">
                         @csrf
                         <div class="table-responsive">
